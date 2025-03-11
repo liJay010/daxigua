@@ -40,11 +40,13 @@ with open("path.txt", "r", encoding="utf-8") as file:
         parts = line.strip().split()  # 去除换行符并按空格分割
         
         size = int(parts[0])
-        org_path = "./pic/" + parts[0] + ".png"
+        org_path = "./pic1/" + parts[0] + ".png"
         if not os.path.exists(org_path):
-            org_path = "./pic/" + parts[0] + ".jpg"
-        convert_to_rgba_with_inner_circle(org_path, parts[1], size)
+            org_path = "./pic1/" + parts[0] + ".jpg"
+        convert_to_rgba_with_inner_circle(org_path, "D:\\relocation\\desktop\\大一二\\daxigua\\"   + parts[1], size)
 
+#base = r"E:\Desktop\blog\"
+#r"D:\relocation\desktop\大一二\"
 out_path = org_path
 # 示例调用
 #convert_to_rgba_with_inner_circle(org_path, out_path, size)
